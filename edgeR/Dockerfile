@@ -10,13 +10,13 @@ USER root
 
 # R is already installed and ready, install the edgeR package and the dependencies
 WORKDIR /tmp
-RUN wget https://github.com/bioneos/images/raw/master/edgeR/src/edgeR_3.20.2.tar.gz && \
+RUN wget https://github.com/bioneos/docker-containers/raw/master/edgeR/src/edgeR_3.20.2.tar.gz && \
   tar zxvf edgeR_3.20.2.tar.gz
-RUN wget https://github.com/bioneos/images/raw/master/edgeR/src/limma_3.34.4.tar.gz && \
+RUN wget https://github.com/bioneos/docker-containers/raw/master/edgeR/src/limma_3.34.4.tar.gz && \
   tar zxvf limma_3.34.4.tar.gz
-RUN wget https://github.com/bioneos/images/raw/master/edgeR/src/locfit_1.5-9.1.tar.gz && \
+RUN https://github.com/bioneos/docker-containers/raw/master/edgeR/src/locfit_1.5-9.1.tar.gz && \
   tar zxvf locfit_1.5-9.1.tar.gz
-RUN wget https://github.com/bioneos/images/raw/master/edgeR/src/Rcpp_0.12.14.tar.gz && \
+RUN wget https://github.com/bioneos/docker-containers/raw/master/edgeR/src/Rcpp_0.12.14.tar.gz && \
   tar zxvf Rcpp_0.12.14.tar.gz
 
 RUN R -e "install.packages(c('/tmp/limma', '/tmp/locfit', '/tmp/Rcpp', '/tmp/edgeR'), repos = NULL, type = 'source')"
