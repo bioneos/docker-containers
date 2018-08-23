@@ -14,7 +14,7 @@ RUN wget https://github.com/bioneos/docker-containers/raw/master/edgeR/src/edgeR
   tar zxvf edgeR_3.20.2.tar.gz
 RUN wget https://github.com/bioneos/docker-containers/raw/master/edgeR/src/limma_3.34.4.tar.gz && \
   tar zxvf limma_3.34.4.tar.gz
-RUN https://github.com/bioneos/docker-containers/raw/master/edgeR/src/locfit_1.5-9.1.tar.gz && \
+RUN wget https://github.com/bioneos/docker-containers/raw/master/edgeR/src/locfit_1.5-9.1.tar.gz && \
   tar zxvf locfit_1.5-9.1.tar.gz
 RUN wget https://github.com/bioneos/docker-containers/raw/master/edgeR/src/Rcpp_0.12.14.tar.gz && \
   tar zxvf Rcpp_0.12.14.tar.gz
